@@ -1,19 +1,20 @@
 <%--
   Created by IntelliJ IDEA.
   User: alexey
-  Date: 23.02.2023
-  Time: 12:27
+  Date: 24.02.2023
+  Time: 15:59
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>My first view</title>
+    <title>Employee registered page</title>
 </head>
 <body>
-I wish you luck!!
-
-
-<a href="/askDetails">Please write your details</a>
+<h2>Dear employee, you are welcome!</h2>
+<br>
+<br>
+<br>
+Your name: ${param.employeeName}
 </body>
 </html>
