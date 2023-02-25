@@ -12,8 +12,8 @@
 </head>
 <body>
 I wish you luck!!
-
-
+<br>
+<br>
 <a href="/askDetails">Please write your details</a>
 </body>
 </html>
