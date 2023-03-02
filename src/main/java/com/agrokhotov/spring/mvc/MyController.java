@@ -2,14 +2,12 @@ package com.agrokhotov.spring.mvc;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-
-import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
 
 @Controller
-@RequestMapping("/employee")
 public class MyController {
     @RequestMapping("/")
     public String showFirstView() {
@@ -23,7 +21,7 @@ public class MyController {
     }
 
     @RequestMapping("/showDetails")
-    public String showEmployeeDetails(@ModelAttribute("employee") Employee emp) {
-        return "show-emp-details-view";
+    public String showEmployeeDetails(@Valid @ModelAttribute("employee") Employee emp, BindingResult bindingResult) {
+        return bindingResult.hasErrors() ? "ask-emp-details-view" : "show-emp-details-view";
     }
 }
